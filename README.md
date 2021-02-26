@@ -1,12 +1,12 @@
-#Master Challenge
+# Master Challenge
 
-##Installation
+## Installation
 - Clone this repository in your local environment.
 
 - Use the comand **npm install** to install the dependencies
 ``npm install``
 
-##Getting started
+## Getting started
 These scripts refer to the different stages of developing an application:
 
 - dev - Runs next dev which starts Next.js in development mode.
