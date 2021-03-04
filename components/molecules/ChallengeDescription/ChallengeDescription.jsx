@@ -1,3 +1,4 @@
+import Button from "@components/atoms/Button/Button";
 import React from "react";
 
 const ChallengeDescription = ({
@@ -11,7 +12,7 @@ const ChallengeDescription = ({
     <div className="grid-cols-3 p-5 bg-secondary-darker text-light">
       <div className="flex justify-between pb-4">
         <h1 className="font-bold text-4xl">{name}</h1>
-        <span>Button</span>
+        <Button children="Exit" color="danger" />
       </div>
       <p className="pb-4">{description}</p>
       <div className="flex justify-between font-bold">
