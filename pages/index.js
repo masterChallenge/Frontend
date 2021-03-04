@@ -1,5 +1,6 @@
 import ChallengeDescription from "@components/molecules/ChallengeDescription/ChallengeDescription";
 import Navbar from "@components/molecules/Navbar/Navbar";
+import Button from '../styles/components/atoms/Button/Button';
 
 const Landing = () => {
   return (
