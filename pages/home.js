@@ -1,11 +1,11 @@
-import  Input  from "../components/Input"
-
+import Navbar from "@components/molecules/Navbar/Navbar";
 const Home = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-wrap">
+      <Navbar />
       <h1 className="text-red-600">Home - Menu Challenges</h1>
-      <Input />
-    </div>);
-}
-
+    </div>
+  );
+};
+    
 export default Home;
