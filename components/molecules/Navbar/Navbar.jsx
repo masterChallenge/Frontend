@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Logo from "@assets/Logo-Horizontal-BW.svg";
 
 const Navbar = () => {

@@ -32,3 +32,4 @@ ChallengeDescription.defaultProps = {
   attemps: 14,
   timesSolved: 198,
 };
+
