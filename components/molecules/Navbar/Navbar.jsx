@@ -4,7 +4,7 @@ import Logo from "@assets/Logo-Horizontal-BW.svg";
 
 const Navbar = () => {
   return (
-    <header className="w-screen bg-primary flex justify-around items-center">
+    <header className="w-full bg-primary flex justify-around items-center">
       <Link href="/">
         <Logo className="m-5 cursor-pointer" />
       </Link>
