@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className='flex justify-center flex-wrap'>
       <Navbar />
-      <h1 className='text-red-600'>Home - Menu Challenges</h1>
+      <h1 className='text-green-400'>Home - Menu Challenges</h1>
     </div>
   );
 };
