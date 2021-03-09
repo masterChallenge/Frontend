@@ -1,4 +1,3 @@
-import ChallengeCard from '@components/molecules/ChallengeCard/ChallengeCard';
 import Navbar from '@components/molecules/Navbar/Navbar';
 
 const Landing = () => {
@@ -6,7 +5,6 @@ const Landing = () => {
     <div className='flex justify-center flex-wrap'>
       <Navbar />
       <h1 className='text-green-400'>Master Challenge - Landing Page</h1>
-      <ChallengeCard estatus='completed' />
     </div>
   );
 };
