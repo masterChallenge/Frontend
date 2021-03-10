@@ -1,7 +1,7 @@
 const challenge_data = {
   id: 1,
   name: "",
-  description: "BG-color se utiliza para cambiar el color del contenido del elemento, el reto es cambiar el backgroudn de text de prueba a azul",
+  description: "Background-color se utiliza para cambiar el color de fondo del contenido del elemento, el reto es cambiar el background del texto de prueba a color azul",
   abilitie: [
     "prop", "display flexbox"
   ],

@@ -11,7 +11,7 @@ const Challenge = () => {
   const [dataChallenge, setDataChallenge] = useState({});
 
     useEffect(() => {
-      fetch("http://localhost:3000/api/challenge/1")
+      fetch("/api/challenge/1")
         .then(response => response.json())
         .then(data => setDataChallenge(data))
     }, []);
