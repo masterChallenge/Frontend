@@ -1,6 +1,5 @@
-import data_challenge from '../../../jsons/challenge'
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const { pid } = req.query
-  res.end(JSON.stringify(data_challenge))
+  const { challenge_data } = await import(`../../../jsons/files/${pid}.js`)
+  res.end(JSON.stringify(challenge_data))
 }
