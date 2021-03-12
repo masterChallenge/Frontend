@@ -13,7 +13,7 @@ export default function Input( { challenge } ) {
   }
 
   return (
-    <div className="flex w-full h-72 bg-gray-700">
+    <div className="flex w-full h-80 bg-gray-700">
       <div className="bg-red-100 w-1/2">
         <Editor
           height='100%'

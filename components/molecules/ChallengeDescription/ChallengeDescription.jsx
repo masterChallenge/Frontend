@@ -9,7 +9,7 @@ const ChallengeDescription = ({
   ...props
 }) => {
   return (
-    <div className="grid-cols-3 p-5 bg-secondary-darker text-light">
+    <div className="grid-cols-3 p-5 bg-secondary-darker text-light w-full">
       <div className="flex justify-between pb-4">
         <h1 className="font-bold text-4xl">{name}</h1>
         <Button children="Exit" color="danger" />
