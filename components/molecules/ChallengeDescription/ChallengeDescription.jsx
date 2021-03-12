@@ -15,7 +15,7 @@ const ChallengeDescription = ({
         <Button children="Exit" color="danger" />
       </div>
       <p className="pb-4">{description}</p>
-      <div className="flex justify-between font-bold">
+      <div className="flex justify-between items-end font-bold">
         <p className="text-2xl">Your attemps: {attempts}</p>
         <p className="text-sm">Times solved: {resolved}</p>
       </div>
