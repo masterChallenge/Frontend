@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Button = ({ children, color }) => {
+const Button = ({ children, color, onClick }) => {
   return (
     <button
-      className={`flex rounded-2xl h-8 text-light shadow font-bold text-xs py-2 px-3.5 items-center bg-${color} my-auto`}
+      type='button'
+      className={`flex rounded-2xl h-8 text-light shadow font-bold text-xs py-2 px-3.5 items-center bg-${color} m-auto`}
+      onClick={onClick}
     >
       {children}
     </button>
