@@ -8,7 +8,7 @@ const ChallengeTips = ({ hints, ...props }) => {
     setCurrentHint(hints[Math.floor(Math.random() * hints.length)]);
   };
   return (
-    <div className="bg-secondary-dark grid-cols-3 w-1/2 text-light p-5 float-right">
+    <div className="bg-secondary-dark grid grid-rows-3 w-full text-light p-5 float-right">
       <h1 className="font-bold text-2xl pb-2">Hints</h1>
       <div>
         {currentHint ? currentHint.description : "Stucked? Try getting a hint!"}
