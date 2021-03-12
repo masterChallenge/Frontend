@@ -16,7 +16,7 @@ const challenge_data = {
       },
       {
         language: "css",
-        value: ".final_divLayout { width: 500px; height: 500px; } .final_divHola { background-color: cyan; width: 100px; height: 100px;}"
+        value: ".final_divLayout { width: 300px; height: 300px; } .final_divHola { background-color: cyan; width: 100px; height: 100px;}"
       },
       {
         language: "js",
@@ -58,7 +58,7 @@ const challenge_data = {
       },
       {
         language: "css",
-        value: ".divLayout { width: 500px; height: 500px; } .divHola { background-color: cyan; width: 50px; height: 50px;}"
+        value: " .divHola { background-color: cyan; width: 50px; height: 50px;}"
       },
       {
         language: "js",

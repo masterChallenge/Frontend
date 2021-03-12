@@ -7,7 +7,7 @@ import ChallengeTips from "@components/molecules/ChallengeTips/ChallengeTips";
 const Challenge = (challengeData) => {
   
   return (
-    <div>
+    <div className="w-full h-full ">
       <ChallengeDescription {...challengeData} />
       <Input {...challengeData} />
       <ChallengeTips />

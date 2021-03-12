@@ -21,10 +21,10 @@ export default function Output({
 
   return (
     <>
-    <div className="bg-gray-200 w-1/4"
+    <div className="bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5"
       dangerouslySetInnerHTML={createMarkup()}>
     </div>
-    <div className="bg-gray-200 w-1/4"
+    <div className="bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5"
       dangerouslySetInnerHTML={finalMarkup()}>
     </div>
     </>

@@ -68,7 +68,7 @@ const challenge_data = {
       },
       {
         language: "css",
-        value: "        .divLayout {        width: 500px;        height: 500px;          display: flex;          justify-content: center;          align-items: center;        }                .divHola {            background-color: cyan;            width: auto;            height: 150px;        margin: 20px;        }        .divContainer {          background: green;          width: 150px;          height: max-content;        overflow: overlay;                }"
+        value: " .divHola {            background-color: cyan;            width: auto;            height: 150px;        margin: 20px;        }        .divContainer {          background: green;          width: 150px;          height: max-content;        overflow: overlay;                }"
       },
       {
         language: "js",
