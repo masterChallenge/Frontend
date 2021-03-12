@@ -4,30 +4,22 @@ import ChallengeDescription from "@components/molecules/ChallengeDescription/Cha
 import Input from "@components/molecules/Input/Input";
 import ChallengeTips from "@components/molecules/ChallengeTips/ChallengeTips";
 
-const Challenge = ({challengeData}) => {
+const Challenge = (challengeData) => {
   
   return (
-    <>
+    <div>
       <ChallengeDescription {...challengeData} />
       <Input {...challengeData} />
       <ChallengeTips />
-    </>
+    </div>
   )
 }
 
 Challenge.getInitialProps = async (ctx) => {
-
-  let protocol = 's:'
-  let host = ctx.req ? ctx.req.headers.host : window.location.hostname
-  if (host.indexOf('localhost') > -1) {
-    protocol = ':'
-  }
-  
-  const domain = ctx.req.headers.host
-  const res = await fetch(`http${protocol}//${domain}/api/challenge/${ctx.query.pid}`)
-  const json = await res.json()
-
-  return { challengeData : json }
+  const pid = parseInt(ctx.query.pid)
+  const file = Number.isInteger(pid) && pid < 4 ? pid : 1
+  const { challenge_data } = await import(`../../jsons/files/${file}.js`)
+  return challenge_data
 }
 
 export default Challenge;
