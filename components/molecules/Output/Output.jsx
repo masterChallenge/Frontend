@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import Ruler from "@scena/react-ruler"
+
+import Panel from '../Panel/Panel'
 
 export default function Output({ 
   cssInputTest, 
@@ -6,27 +9,11 @@ export default function Output({
   outCssTest,
   outHtmlTest
 }) {
-
-  function createMarkup() {
-    const htmlCSS = `<style> ${cssInputTest} </style> ${htmlTest}`
-
-    return {__html: htmlCSS};
-  }
-
-  function finalMarkup() {
-    const htmlCSS = `<style> ${outCssTest} </style> ${outHtmlTest}`
-
-    return {__html: htmlCSS};
-  }
-
+  
   return (
     <>
-    <div className="bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5"
-      dangerouslySetInnerHTML={createMarkup()}>
-    </div>
-    <div className="bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5"
-      dangerouslySetInnerHTML={finalMarkup()}>
-    </div>
+      <Panel css={cssInputTest} html={htmlTest} />
+      <Panel css={outCssTest} html={outHtmlTest} />
     </>
   )
 }
