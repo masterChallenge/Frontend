@@ -1,13 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Editor from "@monaco-editor/react";
 import Output from "../Output/Output";
 import { js_beautify, css_beautify, html_beautify } from "js-beautify";
 
-export default function Input({ challenge }) {
+export default function Input({ challenge, state }) {
   const editorRef = useRef(null);
-  const [cssInputTest, setCssInputTest] = useState(
-    css_beautify(challenge.editor_data[1].value.trim())
-  );
+  const { userInput: cssInputTest, setUserInput: setCssInputTest} = state
+
+  useEffect(() => {
+    setCssInputTest(css_beautify(challenge.editor_data[1].value.trim()))
+  }, [])
 
   function handleEditorDidMount(editor, monaco) {
     editorRef.current = editor;
@@ -17,6 +19,9 @@ export default function Input({ challenge }) {
     <div className="flex w-full min-h-full bg-gray-700">
       <div className="bg-red-100 w-1/2">
         <Editor
+          options={{
+            fontSize:"25"
+          }}        
           height="100%"
           width="100%"
           theme="vs-dark"
@@ -28,7 +33,7 @@ export default function Input({ challenge }) {
           }}
         />
       </div>
-      <Output
+      <Output className="bg-red-100 w-1/2"
         cssInputTest={cssInputTest}
         htmlTest={challenge.editor_data[0].value}
         outCssTest={challenge.output[1].value}
