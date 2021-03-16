@@ -4,7 +4,7 @@ import Icon from '@components/atoms/Icon/Icon';
 import Image from '@components/atoms/Image/Image';
 import React from 'react';
 
-const ChallengeCard = ({ estatus }) => {
+const ChallengeCard = ({ name, difficulty, image, attempts, estatus }) => {
   return (
     <div
       className={`h-36 w-96 flex px-4 py-7 rounded-lg ${
@@ -12,7 +12,7 @@ const ChallengeCard = ({ estatus }) => {
       } `}
     >
       <div className='mr-6'>
-        <Image />
+        <Image url={image} />
       </div>
       <div>
         <div className='flex items-center mb-2.5'>
@@ -21,15 +21,21 @@ const ChallengeCard = ({ estatus }) => {
               estatus != 'completed' && 'text-primary-lightest'
             }`}
           >
-            Challenge Name
+            {name}
           </h2>
-          <Icon />
+          {estatus == 'completed' && <Icon />}
         </div>
-        <DifficultyLabel color='primary' className='w-11'>
-          Easy
+        <DifficultyLabel difficulty={difficulty} className='w-11'>
+          {difficulty}
         </DifficultyLabel>
         <div className='flex mt-2'>
-          <span className='mr-9 text-lg'>Attempts: 0</span>
+          <span
+            className={`mr-9 text-lg ${
+              estatus != 'completed' && 'text-primary-lightest'
+            } `}
+          >
+            Attempts: {attempts}{' '}
+          </span>
           <Button color='secondary-light'>
             {estatus === 'completed' ? 'Retry' : 'Go'}
           </Button>

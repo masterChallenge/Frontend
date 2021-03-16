@@ -1,15 +1,31 @@
-import AcceptedCard from "@components/molecules/AcceptedCard/AcceptedCard";
-import Navbar from "@components/molecules/Navbar/Navbar";
-import RejectedCard from "@components/molecules/RejectedCard/RejectedCard";
+import ChallengeCard from '@components/molecules/ChallengeCard/ChallengeCard';
+import Navbar from '@components/molecules/Navbar/Navbar';
+import React from 'react';
+import MockChallenge from '../jsons/MockChallenge.json';
 
 const Home = () => {
   return (
-    <div className="flex justify-center flex-wrap">
+    <>
       <Navbar />
-      <h1 className="text-green-400">Home - Menu Challenges</h1>
-      <AcceptedCard />
-      <RejectedCard />
-    </div>
+      <div className='p-10'>
+        <h1 className='text-4xl	font-bold'>Good Evening!</h1>
+        <p className='text-lg mt-4'>
+          There’s some challegens to improve your skills!
+        </p>
+        <div className='mt-10 grid grid-cols-3 gap-8	'>
+          {MockChallenge.data.map((item) => (
+            <ChallengeCard
+              key={item.id}
+              name={item.name}
+              difficulty={item.difficulty}
+              image={item.image}
+              attempts={item.attempts}
+              estatus={item.estatus}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
