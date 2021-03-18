@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
   const { pid } = req.query
-  const { challenge_data } = await import(`../../../jsons/files/${pid}.js`)
-  res.end(JSON.stringify(challenge_data))
+  const json = await import(`../../../jsons/files/${pid}.json`)
+  res.end(JSON.stringify(json.default))
 }

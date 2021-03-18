@@ -31,8 +31,10 @@ const Challenge = (challengeData) => {
 Challenge.getInitialProps = async (ctx) => {
   const pid = parseInt(ctx.query.pid);
   const file = Number.isInteger(pid) && pid < 4 ? pid : 1;
-  const { challenge_data } = await import(`../../jsons/files/${file}.js`);
-  return challenge_data;
+  //const json = await import(`../../jsons/files/${file}.js`);
+
+  const json = await import(`../../jsons/files/${pid}.json`)
+  return json.default;
 };
 
 export default Challenge;

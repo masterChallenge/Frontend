@@ -6,29 +6,29 @@ export default function Panel ({
   html
 }){
 
-  const refRulerHorizontal = useRef()
-  const refRulerVertical = useRef()
+  // const refRulerHorizontal = useRef()
+  // const refRulerVertical = useRef()
 
-  useEffect(() => {
-    refRulerHorizontal.current.resize()
-    refRulerVertical.current.resize()
+  // useEffect(() => {
+  //   refRulerHorizontal.current.resize()
+  //   refRulerVertical.current.resize()
 
-    window.addEventListener("resize", () => {
+  //   window.addEventListener("resize", () => {
       
-      refRulerHorizontal.current.resize()
-      refRulerVertical.current.resize()
-    });
+  //     refRulerHorizontal.current.resize()
+  //     refRulerVertical.current.resize()
+  //   });
 
-    setInterval(() => {
-      window.dispatchEvent(new Event('resize'))
-    }, 2500)
-  }, [])
+  //   setInterval(() => {
+  //     window.dispatchEvent(new Event('resize'))
+  //   }, 2500)
+  // }, [])
 
   function createMarkup() {
     const htmlCSS = `
     <div>
       <div id="topDiv" style="display: flex; flex-direction: column; max-height:500px; max-width:500px">
-        <div id="insideDiv" style="overflow: hidden;">
+        <div id="insideDiv" style="">
           <style> 
             ${css} 
           </style> 
@@ -44,7 +44,7 @@ export default function Panel ({
   return (
     <>
       <div className="relative bg-gray-200 w-1/4 border-2 border-secondary-darker p-0.5">
-        <div style={{
+        {/* <div style={{
           position: 'absolute',
           width: '25px',
           height: '25px',
@@ -71,9 +71,9 @@ export default function Panel ({
             top: '30px', 
             width: '25px', 
             height: 'calc(100% - 30px)'
-          }} />
+          }} /> */}
 
-        <div style={{ position: 'absolute', top: '30px', left: '30px', maxHeight:'calc(100% - 30px)', width: 'calc(100% - 30px)'}} dangerouslySetInnerHTML={createMarkup()}>
+        <div style={{ position: 'absolute', top: '0px', left: '0px', height: '500px',maxHeight:'100%', width: '100%'}} dangerouslySetInnerHTML={createMarkup()}>
         </div>
       </div>
     </>
