@@ -3,8 +3,17 @@ import DifficultyLabel from '@components/atoms/DifficultyLabel/DifficultyLabel';
 import Icon from '@components/atoms/Icon/Icon';
 import Image from '@components/atoms/Image/Image';
 import React from 'react';
+import { useRouter } from "next/router";
 
-const ChallengeCard = ({ name, difficulty, image, attempts, estatus }) => {
+const ChallengeCard = ({ challengeId, name, difficulty, image, attempts, estatus }) => {
+  
+  const router = useRouter();
+
+  const handleRedirect = (e, id) => {
+    e.preventDefault();
+    router.push(`/challenge/${id}`);
+  };
+  
   return (
     <div
       className={`h-36 w-96 flex px-4 py-7 rounded-lg ${
@@ -36,7 +45,7 @@ const ChallengeCard = ({ name, difficulty, image, attempts, estatus }) => {
           >
             Attempts: {attempts}{' '}
           </span>
-          <Button color='secondary-light'>
+          <Button color='secondary-light' onClick={(e) => handleRedirect(e, challengeId)}>
             {estatus === 'completed' ? 'Retry' : 'Go'}
           </Button>
         </div>

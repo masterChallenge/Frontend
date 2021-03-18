@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav className='text-white font-bold'>
         <ul className='flex'>
           <li className='m-6'>
-            <Link href='/home'>Challenges</Link>
+            <a href='/home'>Challenges</a>
           </li>
           <li className='m-6'>
             <Link href='https://github.com/masterChallenge'>Project Repo</Link>
