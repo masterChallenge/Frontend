@@ -1,9 +1,10 @@
 import ChallengeCard from '@components/molecules/ChallengeCard/ChallengeCard';
 import Navbar from '@components/molecules/Navbar/Navbar';
 import React from 'react';
-import MockChallenge from '../jsons/MockChallenge.json';
+import { getAllChallenges } from '../utils/challenges/getAll';
 
-const Home = () => {
+const Home = (challenges) => {
+  
   return (
     <>
       <Navbar />
@@ -13,9 +14,10 @@ const Home = () => {
           There’s some challegens to improve your skills!
         </p>
         <div className='mt-10 grid grid-cols-3 gap-8	'>
-          {MockChallenge.data.map((item) => (
+          {challenges.data?.map((item) => (
             <ChallengeCard
               key={item.id}
+              challengeId={item.id}
               name={item.name}
               difficulty={item.difficulty}
               image={item.image}
@@ -27,6 +29,31 @@ const Home = () => {
       </div>
     </>
   );
+};
+
+Home.getInitialProps = async (ctx) => {
+  const fs = require('fs');
+  const dir = './jsons/files';
+  let challenges = {}
+  challenges['data'] = []
+  
+  fs.readdirSync(dir).forEach((file) => {
+    let contents = fs.readFileSync(`${dir}/${file}`, 'utf8')
+
+    const dataFromFile = JSON.parse(contents)
+
+    challenges.data.push({
+      id: dataFromFile.id,
+      name: dataFromFile.name || 'challenge',
+      difficulty: dataFromFile.difficulty,
+      image: dataFromFile.challenge.image,
+      attempts: 0,
+      estatus: 'incomplete'
+    })
+    
+  })
+
+  return challenges;
 };
 
 export default Home;
