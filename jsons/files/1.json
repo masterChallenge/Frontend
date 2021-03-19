@@ -1,10 +1,10 @@
 {
   "id": 1,
   "name": "Background-color 1",
-  "description": "La propiedad background-color se utiliza para cambiar el color de fondo del elemento, el reto es cambiar el background-color del elemento a rojo",
+  "description": "The background-color CSS property sets the background color of an element, we use color keywords like yellow, blue, orange, etc to set its value. Your challenge is set the background-color like the right panel",
   "abilitie": [
-    "prop",
-    "display flexbox"
+    "background-color",
+    "keywords"
   ],
   "difficulty":"easy",
   "keywords": "",
@@ -13,13 +13,8 @@
   "hints": [
     {
       "id": 1,
-      "description": "selector",
-      "url": "http/mdn/selectores"
-    },
-    {
-      "id": 2,
-      "description": "classes",
-      "url": "https/w3school/classes css"
+      "description": "Read more about background-color",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
     }
   ],
   "challenge": {
@@ -69,14 +64,6 @@
       {
         "language": "js",
         "value": ""
-      }
-    ],
-    "hints": [
-      {
-        "id": 1,
-        "name": "bg-color: green",
-        "description": "Vas por buen camino, consulta esta guia para saber mas de colores",
-        "url": "http//mdn/css-bg-color"
       }
     ]
   }
