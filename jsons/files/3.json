@@ -1,12 +1,24 @@
 {
   "id": 3,
   "name": "",
-  "description": "Utiliza width y height para formar un cuadrado de 100x100 pixeles",
+  "description": "Use width and height to get a square of 100x100 pixels like the result",
   "abilitie": "",
   "keywords": "",
   "difficulty":"medium",
   "resolved": 0,
   "attempts": 0,
+  "hints": [
+    {
+      "id": 1,
+      "description": "You can find more information about width",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
+    },
+    {
+      "id": 2,
+      "description": "Read about height property in this documentation",
+      "url": "https://css-tricks.com/almanac/properties/h/height/"
+    }
+  ],
   "challenge": {
     "mco_input": ".divHola { background-color: cyan; width: 50px; height: 50px; }",
     "user_input": "",

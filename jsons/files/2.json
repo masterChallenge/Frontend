@@ -1,12 +1,19 @@
 {
   "id": 2,
   "name": "",
-  "description": "La propiedad background-color se utiliza para cambiar el color del contenido del elemento, el reto es cambiar el background-color del elemento a rojo en hexadecimal ejemplo #00FF00",
+  "description": "The background-color CSS property sets the background color of an element, but in this case we are going to use an hexadecimal value like #000000, #E1E1E1, #03A4E2, etc. Your challenge is to find the hexamecimal value for the red color (Little help: for this case we use uppercase letters 😀)",
   "abilitie": "",
   "keywords": "",
   "difficulty":"easy",
   "resolved": 0,
   "attempts": 0,
+  "hints": [
+    {
+      "id": 1,
+      "description": "You can find more information about background-color",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
+    }
+  ],
   "challenge": {
     "mco_input": ".divHola { background-color: cyan; width: 50px; height: 50px; }",
     "user_input": "",
