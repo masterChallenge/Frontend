@@ -13,13 +13,8 @@
   "hints": [
     {
       "id": 1,
-      "description": "selector",
-      "url": "http/mdn/selectores"
-    },
-    {
-      "id": 2,
-      "description": "classes",
-      "url": "https/w3school/classes css"
+      "description": "Platzi has a course about this #NuncaParesDeAprender",
+      "url": "https://platzi.com/clases/css-grid-layout/"
     }
   ],
   "challenge": {
