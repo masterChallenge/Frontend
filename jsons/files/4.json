@@ -13,13 +13,13 @@
   "hints": [
     {
       "id": 1,
-      "description": "selector",
-      "url": "http/mdn/selectores"
+      "description": "We recommend this Platzi course 'Curso de Diseño Web con CSS Grid y Flexbox'",
+      "url": "https://platzi.com/clases/flexbox-css-grid/"
     },
     {
       "id": 2,
-      "description": "classes",
-      "url": "https/w3school/classes css"
+      "description": "Read more about 'justify-content'",
+      "url": "https://css-tricks.com/almanac/properties/j/justify-content/"
     }
   ],
   "challenge": {
