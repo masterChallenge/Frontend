@@ -1,3 +1,7 @@
+⚠⚠⚠⚠⚠ This repository is deprecated ⚠⚠⚠⚠⚠
+
+We use this repository to mantain the main application for sprint 1 and 2, this was a NEXTjs application but we have some troubles related to the initialProps, the context, and the tailwind integrations that we decided to divide this in two applications that you can find here [frontend](https://github.com/masterChallenge/master-challenge-frontend) and [backend](https://github.com/masterChallenge/master-challenge-backend)
+
 # Master Challenge
 
 ## Installation
